@@ -34,7 +34,6 @@
 			margin-top: 251px;
 			margin-right: 15%;
 			background: url('images/subwaysign.png') no-repeat bottom right;
-			//border-bottom: 5px solid white;
 		}
 		
 		/****** Subway ******/
@@ -64,12 +63,14 @@
 		
 		#lrtrain{
 			margin-left: -100%;
+			animation: lrslidein 18s linear infinite;
 			-webkit-animation: lrslidein 18s linear infinite;
 			-moz-animation: lrslidein 18s linear infinite;
 		}
 
 		#rltrain{
 			margin-left: 100%;
+			animation: rlslidein 22s linear infinite;
 			-webkit-animation: rlslidein 22s linear infinite;
 			-moz-animation: rlslidein 22s linear infinite;
 			position: relative;
@@ -110,18 +111,22 @@
 		
 		.light{
 			background: linear-gradient(to right, rgba(100%, 100%, 100%, 0), rgba(100%, 100%, 100%, 1), rgba(100%, 100%, 100%, 0));
+			background: -webkit-linear-gradient(right, rgba(100%, 100%, 100%, 0), rgba(100%, 100%, 100%, 1), rgba(100%, 100%, 100%, 0));
+			background: -moz-linear-gradient(right, rgba(100%, 100%, 100%, 0), rgba(100%, 100%, 100%, 1), rgba(100%, 100%, 100%, 0));
 			width: 841px;
 			height: 100%;
 		}
 		
 		#lrlight{
 			margin-left: -100%;
+			animation: lrslidein 18s linear infinite;
 			-webkit-animation: lrslidein 18s linear infinite;
 			-moz-animation: lrslidein 18s linear infinite;
 		}
 		
 		#rllight{
 			margin-left: 100%;
+			animation: rlslidein 22s linear infinite;
 			-webkit-animation: rlslidein 22s linear infinite;
 			-moz-animation: rlslidein 22s linear infinite;
 			position: relative;
@@ -132,6 +137,16 @@
 		
 		/* Left right train animation */
 		
+		@keyframes lrslidein {
+			from {
+				margin-left:-400%;
+			}
+      
+			to {
+				margin-left:400%;
+			}
+		}
+
 		@-moz-keyframes lrslidein {
 			from {
 				margin-left:-400%;
@@ -154,6 +169,16 @@
 		
 		/* Right left train animation */
 		
+		@keyframes rlslidein {
+			from {
+				margin-left:500%;
+			}
+      
+			to {
+				margin-left:-500%;
+			}
+		}
+
 		@-moz-keyframes rlslidein {
 			from {
 				margin-left:500%;
