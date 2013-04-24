@@ -1,0 +1,7 @@
+Future City Subway
+
+Dimensions:
+Tunnel height - 88px
+Space between columns centers - 134px
+Space between column edges - 119px
+Column width - 15px
