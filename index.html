@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Future City Subway</title>
+		
+		<style>
+		/****** Background ******/
+		
+		body{
+			background: black url('images/sky_night.jpg') repeat-x top center;
+			margin: 0;
+		}
+		
+		/****** City ******/
+		
+		#cityscape{
+			height: 675px;
+			width: 100%;
+			background: url('images/cityscape.png') repeat-x bottom center;
+		}
+		.underground{
+			height: 500px;
+			width: 100%;
+		}
+		
+		/****** Subway Sign ******/
+		
+		#subwaysign{
+			width: 401px;
+			height: 424px;
+			float: right;
+			margin-top: 251px;
+			margin-right: 15%;
+			background: url('images/subwaysign.png') no-repeat bottom right;
+		}
+		
+		/****** Subway ******/
+		#subway-container{
+			height: 88px;
+			width: 100%;
+			overflow: hidden;
+		}
+		
+		#subway{
+			height: 88px;
+			width: 100%;
+			background: /*#272727*/ url('images/subwaycolumns_unlit.png') repeat center center;
+		}
+		#subway-foreground{
+			height: 100%;
+			width: 100%;
+			background: url('images/subwaycolumnsforeground_unlit.png') repeat center center;
+			position: relative;
+			top: -200%;
+		}
+		
+		/****** Train ******/
+		
+		.train{
+			height: 100%;
+			width: 870px;
+		}
+		
+		#lrtrain{
+			margin-left: -100%;
+			animation: lrslidein 18s linear infinite;
+			-webkit-animation: lrslidein 18s linear infinite;
+			-moz-animation: lrslidein 18s linear infinite;
+		}
+
+		#rltrain{
+			margin-left: 100%;
+			animation: rlslidein 22s linear infinite;
+			-webkit-animation: rlslidein 22s linear infinite;
+			-moz-animation: rlslidein 22s linear infinite;
+			position: relative;
+			top: -100%;
+		}
+		
+		#lrtrain .engine{
+			background: url('images/lrtrainengine.png') no-repeat center bottom;
+		}
+		
+		#rltrain .engine{
+			background: url('images/rltrainengine.png') no-repeat center bottom;
+		}
+		
+		.engine{
+			height:100%;
+			width: 335px;
+		}
+		
+		.passengercarriage{
+			height:100%;
+			width: 253px;
+			background: url('images/traincarriage.png') no-repeat center bottom;
+		}
+		
+		.carriage{
+			float: left;
+		}
+		
+		/****** Light ******/
+
+		#lights{
+			height: 88px;
+			position: relative;
+			bottom: -100%;
+			z-index: -1;
+		}
+		
+		.light{
+			background: linear-gradient(to right, rgba(100%, 100%, 100%, 0), rgba(100%, 100%, 100%, 1), rgba(100%, 100%, 100%, 0));
+			background: -webkit-linear-gradient(right, rgba(100%, 100%, 100%, 0), rgba(100%, 100%, 100%, 1), rgba(100%, 100%, 100%, 0));
+			background: -moz-linear-gradient(right, rgba(100%, 100%, 100%, 0), rgba(100%, 100%, 100%, 1), rgba(100%, 100%, 100%, 0));
+			width: 841px;
+			height: 100%;
+		}
+		
+		#lrlight{
+			margin-left: -100%;
+			animation: lrslidein 18s linear infinite;
+			-webkit-animation: lrslidein 18s linear infinite;
+			-moz-animation: lrslidein 18s linear infinite;
+		}
+		
+		#rllight{
+			margin-left: 100%;
+			animation: rlslidein 22s linear infinite;
+			-webkit-animation: rlslidein 22s linear infinite;
+			-moz-animation: rlslidein 22s linear infinite;
+			position: relative;
+			top: -100%;
+		}
+		
+		/****** Train Animation ******/
+		
+		/* Left right train animation */
+		
+		@keyframes lrslidein {
+			from {
+				margin-left:-400%;
+			}
+      
+			to {
+				margin-left:400%;
+			}
+		}
+
+		@-moz-keyframes lrslidein {
+			from {
+				margin-left:-400%;
+			}
+      
+			to {
+				margin-left:400%;
+			}
+		}
+    
+		@-webkit-keyframes lrslidein {
+			from {
+				margin-left:-400%;
+			}
+      
+			to {
+				margin-left:400%;
+			}
+		}
+		
+		/* Right left train animation */
+		
+		@keyframes rlslidein {
+			from {
+				margin-left:500%;
+			}
+      
+			to {
+				margin-left:-500%;
+			}
+		}
+
+		@-moz-keyframes rlslidein {
+			from {
+				margin-left:500%;
+			}
+      
+			to {
+				margin-left:-500%;
+			}
+		}
+    
+		@-webkit-keyframes rlslidein {
+			from {
+				margin-left:500%;
+			}
+      
+			to {
+				margin-left:-500%;
+			}
+		}
+
+		</style>
+		
+	</head>
+	
+	<body>
+		
+		<div id="cityscape"><a href="#subway"><div id="subwaysign"></div></a></div>
+		
+		<div class="underground"></div>
+		
+		<div id="subway-container">
+			
+			<div id="lights">
+				<div id="lrlight" class="light"></div>
+				<div id="rllight" class="light"></div>
+			</div>
+			
+			<div id="subway">
+
+				<div id="lrtrain" class="train">
+					<div class="passengercarriage carriage"></div>
+					<div class="passengercarriage carriage"></div>
+					<div class="engine carriage"></div>
+				</div>
+				
+				<div id="rltrain" class="train">
+					<div class="engine carriage"></div>
+					<div class="passengercarriage carriage"></div>
+					<div class="passengercarriage carriage"></div>
+				</div>
+							
+				<div id="subway-foreground"></div>
+			</div>
+			
+		</div>
+		
+		<div class="underground"></div>
+
+	</body>
+
+</html>
