@@ -37,23 +37,27 @@
 		}
 		
 		/****** Subway ******/
-		#subway-container{
+		#subway{
 			height: 88px;
 			width: 100%;
 			overflow: hidden;
 		}
 		
-		#subway{
+		#subway-background{
+			height: 100%;
 			height: 88px;
 			width: 100%;
 			background: /*#272727*/ url('images/subwaycolumns_unlit.png') repeat center center;
+			z-index:1;
+			position: relative;
 		}
 		#subway-foreground{
 			height: 100%;
 			width: 100%;
 			background: url('images/subwaycolumnsforeground_unlit.png') repeat center center;
 			position: relative;
-			top: -200%;
+			top: -300%;
+			z-index:3;
 		}
 		
 		/****** Train ******/
@@ -68,6 +72,8 @@
 			animation: lrslidein 18s linear infinite;
 			-webkit-animation: lrslidein 18s linear infinite;
 			-moz-animation: lrslidein 18s linear infinite;
+			position: relative;
+			top: -100%;
 		}
 
 		#rltrain{
@@ -76,7 +82,7 @@
 			-webkit-animation: rlslidein 22s linear infinite;
 			-moz-animation: rlslidein 22s linear infinite;
 			position: relative;
-			top: -100%;
+			top: -200%;
 		}
 		
 		#lrtrain .engine{
@@ -90,12 +96,16 @@
 		.engine{
 			height:100%;
 			width: 335px;
+			z-index:2;
+			position: relative;
 		}
 		
 		.passengercarriage{
 			height:100%;
 			width: 253px;
 			background: url('images/traincarriage.png') no-repeat center bottom;
+			z-index:2;
+			position: relative;
 		}
 		
 		.carriage{
@@ -104,12 +114,6 @@
 		
 		/****** Light ******/
 
-		#lights{
-			height: 88px;
-			position: relative;
-			bottom: -100%;
-			z-index: -1;
-		}
 		
 		.light{
 			background: linear-gradient(to right, rgba(100%, 100%, 100%, 0), rgba(100%, 100%, 100%, 1), rgba(100%, 100%, 100%, 0));
@@ -117,25 +121,12 @@
 			background: -moz-linear-gradient(right, rgba(100%, 100%, 100%, 0), rgba(100%, 100%, 100%, 1), rgba(100%, 100%, 100%, 0));
 			width: 841px;
 			height: 100%;
-		}
-		
-		#lrlight{
-			margin-left: -100%;
-			animation: lrslidein 18s linear infinite;
-			-webkit-animation: lrslidein 18s linear infinite;
-			-moz-animation: lrslidein 18s linear infinite;
-		}
-		
-		#rllight{
-			margin-left: 100%;
-			animation: rlslidein 22s linear infinite;
-			-webkit-animation: rlslidein 22s linear infinite;
-			-moz-animation: rlslidein 22s linear infinite;
+			z-index:0;
 			position: relative;
-			top: -100%;
 		}
 		
-		/****** Train Animation ******/
+
+		/****** Train+light Animation (both together) ******/
 		
 		/* Left right train animation */
 		
@@ -211,29 +202,27 @@
 		
 		<div class="underground"></div>
 		
-		<div id="subway-container">
+		<div id="subway">
 			
-			<div id="lights">
-				<div id="lrlight" class="light"></div>
-				<div id="rllight" class="light"></div>
-			</div>
-			
-			<div id="subway">
+			<div id="subway-background"> </div>
 
-				<div id="lrtrain" class="train">
-					<div class="passengercarriage carriage"></div>
-					<div class="passengercarriage carriage"></div>
-					<div class="engine carriage"></div>
-				</div>
-				
-				<div id="rltrain" class="train">
-					<div class="engine carriage"></div>
-					<div class="passengercarriage carriage"></div>
-					<div class="passengercarriage carriage"></div>
-				</div>
-							
-				<div id="subway-foreground"></div>
+			<div id="lrtrain" class="train">
+						
+				<div class="passengercarriage carriage"></div>
+				<div class="passengercarriage carriage"></div>
+				<div class="engine carriage"></div>
+				<div class="light"></div>
 			</div>
+				
+			<div id="rltrain" class="train">
+				<div class="engine carriage"></div>
+				<div class="passengercarriage carriage"></div>
+				<div class="passengercarriage carriage"></div>
+				<div class="light"></div>
+			</div>
+							
+			<div id="subway-foreground"></div>
+				
 			
 		</div>
 		
@@ -242,3 +231,4 @@
 	</body>
 
 </html>
+
