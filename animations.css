@@ -1,0 +1,94 @@
+/****** Train & Light Animation (both together) ******/
+
+/* Left right animation */
+
+/* from -7680px (-400%) to +7680px (+400%) in 18sec (% of 1920px width screen)
+ * must use pixel dimensions for (more) consistent speed with screen size 
+ */
+
+@-o-keyframes lrslidein {
+  from {
+    margin-left:-7680px;
+  }
+
+  to {
+    margin-left:7680px;
+  }
+}
+
+@-moz-keyframes lrslidein {
+  from {
+    margin-left:-7680px;
+  }
+
+  to {
+    margin-left:7680px;
+  }
+}
+
+@-webkit-keyframes lrslidein {
+  from {
+    margin-left:-7680px;
+  }
+
+  to {
+    margin-left:7680px;
+  }
+}
+
+@keyframes lrslidein {
+  from {
+    margin-left:-7680px;
+  }
+
+  to {
+    margin-left:7680px;
+  }
+}
+
+/* Right left animation */
+
+/* from +9600px (+500%) to -9600px (-500%) in 22sec (% of 1920px width screen)
+ * must use pixel dimensions for (more) consistent speed with screen size 
+ */
+
+@-o-keyframes rlslidein {
+  from {
+    margin-left:9600px;
+  }
+
+  to {
+    margin-left:-9600px;
+  }
+}
+
+@-moz-keyframes rlslidein {
+  from {
+    margin-left:9600px;
+  }
+
+  to {
+    margin-left:-9600px;
+  }
+}
+
+@-webkit-keyframes rlslidein {
+  from {
+    margin-left:9600px;
+  }
+
+  to {
+    margin-left:-9600px;
+  }
+}
+
+@keyframes rlslidein {
+  from {
+    margin-left:9600px;
+  }
+
+  to {
+    margin-left:-9600px;
+  }
+}
+
