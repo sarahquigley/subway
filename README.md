@@ -13,13 +13,13 @@ Subway is an experiment in CSS3 animations. Sit back and wait for a train (or tw
 
 ### Layered Images
 
-Absolute positioning is used to create a series of layers, which ordered using z-index. From back to front, these layers consist of:
-- Train lighting effect, created using a linear gradient
+Absolute positioning is used to create a series of z-index ordered layers. From back to front, these layers consist of:
+- Train background lighting effect, created using a linear gradient
 - Back set of subway tunnel columns, a very simple repeated background image 
 - Train, created using a series of images (as background images)
 - Front set of subway columns, again, a simple repeated background image
 
-This image layering creates the effect of a subway train travelling through a tunnel with columns lining either side. Columns are black, so are invisible on the black background until the train and its lighting appear.
+This image layering creates the effect of a subway train travelling through a tunnel with columns lining either side. Columns are black, thus are invisible on the black background until the train and its background lighting appear.
 
 ### CSS3 animations
 
