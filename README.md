@@ -3,7 +3,7 @@ Subway
 
 Relax and watch the trains go by.
 
-View live version: [Go down to the subway.](http://sarahquigley.net/subway/)
+View live version: [Go down to the subway.](https://subway.sarahquigley.net)
 
 ## What is Subway?
 
